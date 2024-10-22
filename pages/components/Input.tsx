@@ -1,4 +1,4 @@
-export const Input = ({ ...props }) => {
+export default function Input({ ...props }) {
   return (
     <input
       className={
@@ -7,4 +7,4 @@ export const Input = ({ ...props }) => {
       {...props}
     />
   );
-};
+}

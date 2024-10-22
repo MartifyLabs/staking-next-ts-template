@@ -1,7 +1,7 @@
 import { BlockfrostProvider, BrowserWallet, Transaction } from "@meshsdk/core";
 import { StakeButton, useWallet } from "@meshsdk/react";
 import { useEffect, useState } from "react";
-import { Input } from "./components/Input";
+import Input from "./components/Input";
 
 const blockfrostApiKey = process.env.NEXT_PUBLIC_APIKEY!;
 
@@ -44,11 +44,11 @@ export default function Home() {
     }
   }, [walletInfo.name]);
 
-  function userHasStaked() {
+  const userHasStaked = () => {
     // Do something after user has staked to the pool
     setMessageAfterStake(`You has staked to the pool. Great job! 🎉
       In real-world cases, you can show useful information to the user after they have staked to the pool. For example, sending them appreciation emails, showing links to discord channels, or other resources that can help them learn more about your activity.`);
-  }
+  };
 
   const registerStake = async () => {
     if (!rewardAddress) {
