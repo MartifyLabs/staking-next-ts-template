@@ -176,25 +176,47 @@ export default function Home() {
         </div>
         <p>{success && <span>{success}</span>}</p>
         <p>{error && <span className="text-red-500">{error}</span>}</p>
-        <div className="box">
+
+        <div className="flex flex-col gap-2">
           <h2 className="title">Register Reward Address</h2>
-
-          <button className="btn-outline" onClick={registerStake}>
-            Register address
-          </button>
+          <div className="box">
+            <p>
+              You can build a transaction with{" "}
+              <code>.registerStake(rewardAddress)</code> to deregister a stake
+              address
+            </p>
+            <button className="btn-outline" onClick={registerStake}>
+              Register address
+            </button>
+          </div>
         </div>
-        <div className="box">
+
+        <div className="flex flex-col gap-2">
           <h2 className="title">Deregister Reward Address</h2>
-          <button className="btn-outline" onClick={deregisterStake}>
-            Deregister address
-          </button>
+          <div className="box">
+            <p>
+              You can build a transaction with{" "}
+              <code>.deregisterStake(rewardAddress)</code> to deregister a stake
+              address
+            </p>
+            <button className="btn-outline" onClick={deregisterStake}>
+              Deregister address
+            </button>
+          </div>
         </div>
 
-        <div className="box">
+        <div className="flex flex-col gap-2">
           <h2 className="title">Delegate Stake to Pool</h2>
-          <button className="btn-outline" onClick={stakeToPool}>
-            Delegate Stake
-          </button>
+          <div className="box">
+            <p>
+              You can build a transaction with{" "}
+              <code>.delegateStake(rewardAddress, poolId)</code> to delegate
+              stake to a pool
+            </p>
+            <button className="btn-outline" onClick={stakeToPool}>
+              Delegate Stake
+            </button>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">
